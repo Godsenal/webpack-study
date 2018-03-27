@@ -1,7 +1,8 @@
-require ('./app.scss');
-var hello = require('./hello.js')
-var everyone = require('./everyone.js');
-var img = require('./githubpage.jpg');
+import './app.scss';
+import hello from './hello.js';
+import everyone from './everyone.js';
+import img from './githubpage.jpg';
+import svg from './rocket.svg';
 
 const createGreeting = () => {
     var el = document.createElement('div');
@@ -16,6 +17,15 @@ const createImg = () => {
     return el;
 }
 
+const createSvg = () => {
+    var el = document.createElement('img');
+    el.src = svg;
+
+    return el;
+}
+
+console.log(svg);
+
 document.body.appendChild(createGreeting());
 document.body.appendChild(createImg());
-
+document.body.appendChild(createSvg());
