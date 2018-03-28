@@ -1,7 +1,6 @@
 import './app.scss';
 import hello from './hello.js';
 import everyone from './everyone.js';
-import img from './githubpage.jpg';
 import svg from './rocket.svg';
 
 const createGreeting = () => {
@@ -12,7 +11,7 @@ const createGreeting = () => {
 
 const createImg = () => {
     var el = document.createElement('img');
-    el.src = img;
+    el.src = 'githubpage.jpg';
     el.width = 500;
     return el;
 }
@@ -24,7 +23,6 @@ const createSvg = () => {
     return el;
 }
 
-console.log(svg);
 
 document.body.appendChild(createGreeting());
 document.body.appendChild(createImg());
